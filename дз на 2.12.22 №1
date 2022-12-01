@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float b1 = 1, b2 = 2, b;
+	int n;
+	cout << "n = "; cin >> n;
+	for (int i = 3; i <= n; i++)
+	{
+		b = b2 / b1 + 1;
+		b1 = b2;
+		b2 = b;
+		cout << "b" << i << "=" << b << endl;
+	}
+	//cout << "b" << n << "=" << b << endl;
+	return 0;
+}
