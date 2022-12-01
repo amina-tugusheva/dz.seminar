@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	
+	float x;
+	cin >> x;
+	float fkt1 = 1, xvst1 = pow(x, 3), fkt, xvst;
+	int k;
+	cin >> k;
+	cout << "n1 = " << fkt1 * xvst1 << endl;
+	float s = fkt1 * xvst1;
+	for (int i = 2; i <= k; i++)
+	{
+		fkt = fkt1 * i;
+		xvst = xvst1 * pow(x, 2);
+		cout << "n" << i << " = " << fkt * xvst << endl;
+		s += fkt * xvst;
+		fkt1 = fkt;
+		xvst1 = xvst;
+	}
+	cout << "s = " << s;
+	return 0;
+}
