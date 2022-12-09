@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	int a1 = 1, a2 = 1,a;
+	int* mas = new int[n];
+	for (int i = 1; i <= n; i++)
+	{
+		a = a1 + a2;
+		a1 = a2;
+		a2 = a;
+		mas[i] = a;
+	}
+	for (int i = n; i >= 1; i--)
+	{
+		cout << mas[i] << " ";
+	}
+
+	
+}
