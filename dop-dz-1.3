@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int d;
+	cin >> d;
+
+	switch (d)
+	{
+	case 1:
+		cout << "до";
+		break;
+	case 2:
+		cout << "ре";
+		break;
+	case 3:
+		cout << "ми";
+		break;
+	case 4:
+		cout << "фа";
+		break;
+	case 5:
+		cout << "соль";
+		break;
+	case 6:
+		cout << "ля";
+		break;
+	case 7:
+		cout << "си";
+		break;
+	default:
+		cout << "нет ноты с таким номером";
+	}
+}
