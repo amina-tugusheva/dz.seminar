@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int** creat(int& n, int& m)
+{
+	cin >> n >> m;
+	int** mas = new int* [n];
+	for (int i = 0; i < n; i++)
+		mas[i] = new int[m];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> mas[i][j];
+	return mas;
+}
+
+void deleteMas(int** mas, int n)
+{
+	for (int i = 0; i < n; i++)
+		delete[] mas[i];
+	delete[] mas;
+}
+int main()
+{
+	int n, m, k;
+	int** a = creat(n, m);
+	
+	cin >> k;
+	if (k < 0 || k > n)
+		cout << "error";
+	else
+	{
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = k; j < m; j++)
+			{
+				a[i][j] = a[i][j + 1];
+			}
+
+		}
+
+		m--;
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < m; j++)
+			{
+				cout << a[i][j] << " ";
+			}
+			cout << endl;
+		}
+	
+		deleteMas(a, n);
+		return 0;
+	}
+
+	
+
+	
+}
