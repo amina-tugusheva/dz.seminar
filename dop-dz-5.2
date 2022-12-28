@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, m;
+	cin >> n >> m;
+	int** a = new int*[n];
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = new int[n];
+	}
+	for (int i = 0; i < n ;i++)
+	{
+		for (int j = 0; j < m; j++)
+			cin >> a[i][j];
+	}
+	int s = 0, k = 0;
+	for (int i = 0; i < n ;i++)
+	{
+		for (int j = 0; j < m; j++)
+			if (a[i][j] < a[i][0])
+			{
+				s += a[i][j];
+				k += 1;
+			}
+		
+	}
+	cout << "s = " << s << endl << "k = " << k;
+	//for (int i = 0; i < n; i++)
+	//{
+		//delete[] a[i];
+	//}
+	//delete[] a;
+	return 0;
+
+}
