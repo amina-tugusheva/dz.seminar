@@ -1,0 +1,16 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	int n = 1;
+	float s = 0;
+	float e;;
+	cin >> e;
+	while (fabs(s) <= e)
+	{
+		s += sin(n) / (pow(2, n));
+		n++;
+	}
+	cout << s;
+}
